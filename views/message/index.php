@@ -18,8 +18,8 @@ $this->title = 'My Yii Application';
         <?= $form->field($model, 'text')->textInput() ?>
         <div class="form-group">
 
-            <?= $form=Html::submitButton('Отправить сообщение', ['class' => 'btn btn-lg btn-success']) ?>
-            <? $form = ActiveForm::end(); ?>
+            <?= Html::submitButton('Отправить сообщение', ['class' => 'btn btn-lg btn-success']) ?>
+            <? ActiveForm::end(); ?>
 
         </div>
 

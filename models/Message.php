@@ -5,6 +5,9 @@ namespace app\models;
 
 
 
+use app\controllers\TelegramController;
+use Longman\TelegramBot\Request;
+use Longman\TelegramBot\Telegram;
 use yii\db\ActiveRecord;
 
 class Message extends ActiveRecord
@@ -25,8 +28,13 @@ class Message extends ActiveRecord
     {
         $message=new Message();
         $post=\Yii::$app->request->post();
-        $message->text=$post['Message']['text'];
+        $post=$post['Message']['text'];
+        $message->text=$post;
         $message->save();
+        $data = [];
+        $data['chat_id'] = '136959136';
+        $data['text'] = $post;
+        TelegramController::handle($data);
     }
 
 

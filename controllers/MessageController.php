@@ -1,12 +1,12 @@
 <?php
 
-
 namespace app\controllers;
 
 
 use app\models\Message;
 use yii\data\Pagination;
 use yii\web\Controller;
+
 
 
 class MessageController extends Controller
@@ -26,11 +26,11 @@ class MessageController extends Controller
             'messages' => $messages,
             'pages' => $pages,
         ]);
+
     }
 
     public function actionStore()
     {
-
         Message::store();
         $this->redirect('index');
 
