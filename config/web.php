@@ -48,7 +48,8 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-          //   'message/index/<page>' => 'message/index',
+             '/message/<page:\d+>' => 'message/index/',
+
             ],
         ],
 

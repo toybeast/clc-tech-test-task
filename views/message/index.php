@@ -10,7 +10,7 @@ use yii\helpers\Html;
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
-    <?php $form = ActiveForm::begin(['action' => 'store']);
+    <?php $form = ActiveForm::begin(['action' => 'store', 'method' => 'post']);
 ?>
 
     <div class="jumbotron">
