@@ -24,8 +24,6 @@ class TelegramController extends Controller
             $this->telegram = new Telegram($bot_api_key, $bot_username);
             $this->telegram->handle();
             $result = Request::sendMessage($data);
-            var_dump($result);
-            exit;
 
         } catch (TelegramException $e) {}
     }
